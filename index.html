@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Track CMSC131 grades and plan the scores you need.">
+<title>CMSC131 Grade Tracker</title><link rel="stylesheet" href="./style.css"><script defer src="./app.js"></script>
+</head>
+<body>
+<main class="shell">
+<section class="intro" aria-labelledby="title"><div><h1 id="title">CMSC131 Grade Tracker</h1></div><span id="save" class="saved">Saved on this browser</span></section>
+<section class="summary" aria-label="Grade summary">
+<article class="metric actual"><div class="metric-label"><span class="dot"></span> CURRENT GRADE</div><div class="big" id="current">—</div><p id="current-note">Confirmed scores only</p></article>
+<article class="metric"><div class="metric-label">COURSE WEIGHT GRADED</div><div class="big" id="graded">—</div><div id="progress" class="meter" role="progressbar" aria-label="Course weight graded" aria-valuemin="0" aria-valuemax="100"><span></span></div><p id="graded-note"></p></article>
+<article class="metric forecast"><div class="metric-label">PROJECTED FINAL GRADE</div><div class="big" id="projection">—</div><p id="projection-note"></p></article>
+</section>
+<div class="workspace">
+<section class="panel gradebook" id="gradebook" aria-labelledby="grades-title">
+<div class="panel-heading"><div><h2 id="grades-title">Gradebook</h2><p>Enter a score and choose Confirmed or Estimate.</p></div></div>
+<div class="filters" id="filters" aria-label="Filter gradebook"></div>
+<div id="grade-rows"></div>
+</section>
+<div class="aside">
+<section class="panel planner" id="planner" aria-labelledby="planner-title">
+<div class="panel-heading"><div><h2 id="planner-title">What-if planner</h2><p>Set a target and try future scores.</p></div></div>
+<div class="planner-body">
+<div class="field-head"><label for="target">Course target</label><span class="unit-field"><input id="target" type="number" min="0" max="100" step="any" inputmode="decimal"><span>%</span></span></div>
+<div class="presets" aria-label="Target presets"><button type="button" data-target="pass">Passing</button><button type="button" data-target="70">70%</button><button type="button" data-target="80">80%</button><button type="button" data-target="90">90%</button></div>
+<div id="passing-field"><label for="passing">Passing cutoff</label><span class="unit-field"><input id="passing" type="number" min="0" max="100" step="any" inputmode="decimal"><span>%</span></span></div>
+<div class="answer" aria-live="polite"><span class="metric-label" id="need-label">NEEDED ON UNPLANNED WORK</span><strong id="needed">—</strong><p id="need-note"></p></div>
+<div class="scenario"><div class="field-head"><label for="future">Default for blank scores</label><span class="unit-field"><input id="future" type="number" min="0" max="100" step="any" inputmode="decimal"><span>%</span></span></div><p>Applies to the projection. Add individual estimates in the gradebook to override it.</p><div id="scenario-presets" class="presets" aria-label="Scenario presets"><button type="button" data-future="70">70%</button><button type="button" data-future="80">80%</button><button type="button" data-future="90">90%</button></div><div id="final-needed" class="final-needed"></div></div>
+</div></section>
+<section class="panel remaining" aria-labelledby="remaining-title"><div class="panel-heading"><div><h2 id="remaining-title">Remaining work</h2><p id="remaining-note"></p></div></div><div id="remaining-list"></div></section>
+</div></div>
+<footer><span>CMSC131 · Object-Oriented Programming I</span><span>Weights: projects 27% · quizzes 20% · midterms 33% · final 20%</span></footer>
+</main></body></html>
