@@ -1,6 +1,6 @@
-# CMSC131 Grade Tracker
+# CMSC131 grade trawcker
 
-I wanted a quick way to answer one question: what do I need on the final to finish with an 80%? This tracker uses the course weights to answer that as grades come in.
+I wanted a way to answer one question: what do I need to score on the rest of my grades to get an 80% in the class? 
 
 - Enter points for quizzes, projects, midterms, and the final.
 - Mark posted scores **Confirmed** and what-if scores **Estimate**.
