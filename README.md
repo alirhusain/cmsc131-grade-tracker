@@ -1,4 +1,4 @@
-# CMSC131 grade trawcker
+# cmsc131-grade-tracker
 
 I wanted a way to answer one question: what do I need to score on the rest of my grades to get an 80% in the class? 
 
